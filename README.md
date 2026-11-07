@@ -36,4 +36,5 @@ Se desarrolló un dashboard interactivo en Power BI con tres indicadores, cuatro
 - [Dataset original](data/raw/cardio_train.csv)
 - [Dataset procesado](data/processed/cardio_limpio.csv)
 - [Dashboard de Power BI](dashboard/TP%20final%20Martinez%20Camila%20-%20Cardiovascular.pbix)
+
 El repositorio permite consultar los datos, reproducir el análisis y explorar los resultados mediante el archivo de Power BI.
