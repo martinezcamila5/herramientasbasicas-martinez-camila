@@ -1,20 +1,20 @@
-# Trabajo Final Integrador – Análisis de factores de riesgo cardiovascular
+# 🫀 Trabajo Final Integrador – Análisis de factores de riesgo cardiovascular
 
 **Autora:** Camila Martínez  
 **Curso:** Herramientas Básicas para el Análisis de Datos – UTN  
 **Cohorte:** Septiembre 2026
 
-## Objetivo
+## 🎯 Objetivo
 
 Analizar la relación entre factores clínicos, características físicas, hábitos de vida y la presencia de enfermedades cardiovasculares. El proyecto integra Python, Power BI y GitHub para desarrollar un análisis reproducible y comunicar sus resultados mediante visualizaciones e indicadores interactivos.
 
-## Dataset
+## 📊 Dataset
 
 Se utilizó el *Cardiovascular Disease Dataset*, publicado por Svetlana Ulianova en Kaggle, compuesto originalmente por 70.000 registros. Incluye edad, sexo, peso, altura, presión arterial, colesterol, glucosa, tabaquismo, consumo de alcohol, actividad física y diagnóstico cardiovascular.
 
 **Fuente:** [Cardiovascular Disease Dataset – Kaggle](https://www.kaggle.com/datasets/sulianova/cardiovascular-disease-dataset).
 
-## Metodología
+## 🛠️ Metodología
 
 El procesamiento se realizó en Google Colab utilizando Python y las bibliotecas Pandas, Matplotlib y Seaborn.
 
@@ -22,13 +22,19 @@ Primero se auditaron los tipos de datos, valores faltantes, duplicados y valores
 
 También se transformó la edad de días a años aproximados, se convirtió la altura a metros y se calculó el índice de masa corporal (IMC). Se realizaron estadísticas descriptivas, análisis de valores extremos mediante IQR y percentiles, y visualizaciones exploratorias.
 
-## Resultados principales
+## 📈 Resultados principales
 
 La prevalencia cardiovascular general fue del **49,44 %**. El **26,85 %** de los registros presentó presión sistólica elevada (140 mmHg o más), mientras que la prevalencia cardiovascular entre personas inactivas fue del **53,26 %**.
 
 Se observaron mayores porcentajes de diagnósticos positivos en los niveles elevados de colesterol y glucosa, así como un incremento de la prevalencia en los grupos de mayor edad. Estos resultados describen asociaciones y no permiten establecer relaciones causales.
 
-## Dashboard y archivos
+## 🔎 Conclusiones y limitaciones
+
+El análisis permitió identificar patrones relevantes entre las características de la población estudiada y la presencia de enfermedades cardiovasculares. Estos hallazgos pueden orientar nuevas investigaciones, aunque no permiten establecer relaciones causales ni generalizar automáticamente los resultados a toda la población.
+
+Durante la limpieza se excluyeron 1.456 registros (2,08 %) por criterios de consistencia. Esta depuración puede influir en los resultados, por lo que las conclusiones deben interpretarse considerando las limitaciones del conjunto de datos.
+
+## 📁 Dashboard y archivos
 
 Se desarrolló un dashboard interactivo en Power BI con tres indicadores, cuatro gráficos y filtros por sexo y grupo de edad.
 
@@ -40,3 +46,10 @@ Se desarrolló un dashboard interactivo en Power BI con tres indicadores, cuatro
 - [Dashboard de Power BI](dashboard/TP%20final%20Martinez%20Camila%20-%20Cardiovascular.pbix)
 
 El repositorio permite consultar los datos, reproducir el análisis y explorar los resultados mediante el archivo de Power BI.
+
+## ▶️ Cómo reproducir el análisis
+
+1. Descargar el archivo `cardio_train.csv` desde la carpeta `data/raw`.
+2. Abrir el notebook `.ipynb` de la carpeta `notebooks` en Google Colab y cargar el CSV en la sesión.
+3. Ejecutar las celdas en orden para reproducir la limpieza, los gráficos y los indicadores.
+4. Para explorar el dashboard interactivo, descargar el archivo `.pbix` de la carpeta `dashboard` y abrirlo con Power BI Desktop.
