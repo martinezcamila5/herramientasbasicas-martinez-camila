@@ -32,6 +32,8 @@ Se observaron mayores porcentajes de diagnósticos positivos en los niveles elev
 
 Se desarrolló un dashboard interactivo en Power BI con tres indicadores, cuatro gráficos y filtros por sexo y grupo de edad.
 
+![Dashboard de análisis cardiovascular](dashboard/dashboard_cardiovascular.png.png)
+
 - [Notebook de Python](notebooks/TP_final_Martinez_Camila.ipynb)
 - [Dataset original](data/raw/cardio_train.csv)
 - [Dataset procesado](data/processed/cardio_limpio.csv)
