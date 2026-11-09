@@ -6,37 +6,29 @@
 
 ## 🎯 Objetivo
 
-Analizar la relación entre factores clínicos, características físicas, hábitos de vida y la presencia de enfermedades cardiovasculares. El proyecto integra Python, Power BI y GitHub para desarrollar un análisis reproducible y comunicar sus resultados mediante visualizaciones e indicadores interactivos.
+Analizar asociaciones entre factores clínicos, características físicas, hábitos de vida y diagnósticos cardiovasculares, integrando Python, Power BI y GitHub para presentar resultados claros y verificables.
 
 ## 📊 Dataset
 
-Se utilizó el *Cardiovascular Disease Dataset*, publicado por Svetlana Ulianova en Kaggle, compuesto originalmente por 70.000 registros. Incluye edad, sexo, peso, altura, presión arterial, colesterol, glucosa, tabaquismo, consumo de alcohol, actividad física y diagnóstico cardiovascular.
-
-**Fuente:** [Cardiovascular Disease Dataset – Kaggle](https://www.kaggle.com/datasets/sulianova/cardiovascular-disease-dataset).
+Se utilizó el *Cardiovascular Disease Dataset* de Svetlana Ulianova, disponible en [Kaggle](https://www.kaggle.com/datasets/sulianova/cardiovascular-disease-dataset). Contiene 70.000 registros originales con información sobre edad, sexo, peso, altura, presión arterial, colesterol, glucosa, tabaquismo, alcohol, actividad física y diagnóstico cardiovascular.
 
 ## 🛠️ Metodología
 
-El procesamiento se realizó en Google Colab utilizando Python y las bibliotecas Pandas, Matplotlib y Seaborn.
+El análisis se desarrolló en Google Colab con Python, Pandas, Matplotlib y Seaborn. Se revisaron tipos de datos, valores faltantes, duplicados y valores atípicos. Se aplicaron controles de consistencia sobre presión arterial, altura y peso, conservando 68.544 registros (97,92 %).
 
-Primero se auditaron los tipos de datos, valores faltantes, duplicados y valores atípicos. Luego se aplicaron criterios de consistencia a las mediciones de presión arterial, altura y peso. Se conservaron 68.544 registros, equivalentes al 97,92 % del conjunto original.
-
-También se transformó la edad de días a años aproximados, se convirtió la altura a metros y se calculó el índice de masa corporal (IMC). Se realizaron estadísticas descriptivas, análisis de valores extremos mediante IQR y percentiles, y visualizaciones exploratorias.
+También se convirtió la edad de días a años aproximados y la altura a metros, y se calculó el índice de masa corporal (IMC). La exploración incluyó estadísticas descriptivas, detección de extremos mediante IQR y percentiles, gráficos e indicadores reproducibles.
 
 ## 📈 Resultados principales
 
-La prevalencia cardiovascular general fue del **49,44 %**. El **26,85 %** de los registros presentó presión sistólica elevada (140 mmHg o más), mientras que la prevalencia cardiovascular entre personas inactivas fue del **53,26 %**.
-
-Se observaron mayores porcentajes de diagnósticos positivos en los niveles elevados de colesterol y glucosa, así como un incremento de la prevalencia en los grupos de mayor edad. Estos resultados describen asociaciones y no permiten establecer relaciones causales.
+La prevalencia cardiovascular fue del **49,44 %**. El **26,85 %** de los registros presentó presión sistólica de al menos 140 mmHg; entre las personas inactivas, la prevalencia cardiovascular alcanzó el **53,26 %**. También se observaron mayores porcentajes de diagnósticos positivos con niveles elevados de colesterol y glucosa y en grupos de mayor edad.
 
 ## 🔎 Conclusiones y limitaciones
 
-El análisis permitió identificar patrones relevantes entre las características de la población estudiada y la presencia de enfermedades cardiovasculares. Estos hallazgos pueden orientar nuevas investigaciones, aunque no permiten establecer relaciones causales ni generalizar automáticamente los resultados a toda la población.
-
-Durante la limpieza se excluyeron 1.456 registros (2,08 %) por criterios de consistencia. Esta depuración puede influir en los resultados, por lo que las conclusiones deben interpretarse considerando las limitaciones del conjunto de datos.
+Los resultados identifican asociaciones, no relaciones causales, y no deben generalizarse automáticamente a otras poblaciones. Durante la limpieza se excluyeron 1.456 registros (2,08 %); esta selección puede influir en las estimaciones obtenidas.
 
 ## 📁 Dashboard y archivos
 
-Se desarrolló un dashboard interactivo en Power BI con tres indicadores, cuatro gráficos y filtros por sexo y grupo de edad.
+Se construyó un dashboard en Power BI con tres indicadores, cuatro gráficos y filtros por sexo y grupo de edad.
 
 ![Dashboard de análisis cardiovascular](dashboard/dashboard_cardiovascular.png.png)
 
@@ -45,11 +37,9 @@ Se desarrolló un dashboard interactivo en Power BI con tres indicadores, cuatro
 - [Dataset procesado](data/processed/cardio_limpio.csv)
 - [Dashboard de Power BI](dashboard/TP%20final%20Martinez%20Camila%20-%20Cardiovascular.pbix)
 
-El repositorio permite consultar los datos, reproducir el análisis y explorar los resultados mediante el archivo de Power BI.
-
 ## ▶️ Cómo reproducir el análisis
 
-1. Descargar el archivo `cardio_train.csv` desde la carpeta `data/raw`.
-2. Abrir el notebook `.ipynb` de la carpeta `notebooks` en Google Colab y cargar el CSV en la sesión.
-3. Ejecutar las celdas en orden para reproducir la limpieza, los gráficos y los indicadores.
-4. Para explorar el dashboard interactivo, descargar el archivo `.pbix` de la carpeta `dashboard` y abrirlo con Power BI Desktop.
+1. Descargar `cardio_train.csv` desde `data/raw`.
+2. Abrir el notebook en Google Colab y cargar el CSV en la sesión.
+3. Ejecutar las celdas en orden para obtener la limpieza, los gráficos y los indicadores.
+4. Descargar el `.pbix` desde `dashboard` y abrirlo con Power BI Desktop para explorar el panel interactivo.
